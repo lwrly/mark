@@ -1,9 +1,14 @@
 {
   "name": "@lwrly/mark",
-  "version": "1.0.7",
+  "version": "1.0.10",
   "description": "Mark marks up what you mark down with markdown!",
-  "author": "Let'sWorkRemote.ly!",
+  "main": "index.js",
+  "author": {
+    "name": "Let'sWorkRemote.ly!"
+  },
+  "homepage": "https://letsworkremote.ly",
   "license": "MIT",
+  "private": false,
   "repository": {
     "url": "https://github.com/lwrly/mark"
   },
@@ -18,7 +23,6 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": false,
   "dependencies": {
     "@angular/animations": "~10.1.1",
     "@angular/common": "~10.1.1",

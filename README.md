@@ -5,7 +5,7 @@ Mark marks up what you mark down with markdown!
 
 ## Install
 
-Add the registry to your .npmrc:
+Add the registry to your `.npmrc`:
 ```
 registry=https://npm.pkg.github.com/lwrly
 ```
@@ -17,7 +17,7 @@ npm i @lwrly/mark
 
 Not available via yarn (yet).
 
-In your app.module.ts:
+In your `app.module.ts`:
 ```
 ...
   imports: [
