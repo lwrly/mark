@@ -1,6 +1,6 @@
 {
   "name": "@lwrly/mark",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Mark marks up what you mark down with markdown!",
   "main": "index.js",
   "author": {
