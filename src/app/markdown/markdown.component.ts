@@ -16,7 +16,7 @@ const MARKDOWN_PLACEHOLDER = `# We <3 markdown!`;
   </li>
 </ul>
 <div class="border rounded-bottom border-right-0" id="markdown-editor">
-  <textarea class="bg-white" rows="25" [placeholder]="placeHolder" (keyup)="onValueChange($event)" *ngIf="!preview"></textarea>
+  <textarea class="bg-white" rows="25" [placeholder]="placeholder" (keyup)="onValueChange($event)" *ngIf="!preview"></textarea>
   <div [innerHtml]="compiled" *ngIf="preview"></div>
 </div>
   `,
@@ -25,19 +25,23 @@ const MARKDOWN_PLACEHOLDER = `# We <3 markdown!`;
 export class MarkdownComponent implements OnInit {
   @Output() valueChanged = new EventEmitter<string>();
   @Input() compiled: string;
-  @Input() placeHolder: string;
+  @Input() placeholder: string;
 
   preview: boolean = false;
 
   constructor(private md: MDService, private ref: ChangeDetectorRef) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void { 
+  	if(!this.placeholder) {
+  	  this.placeholder = MARKDOWN_PLACEHOLDER;
+  	} 
+  }
 
   onValueChange(e) {
     const body = e.target.value;
 
     if (!body) {
-      return this.valueChanged.emit(this.placeHolder); //reset
+      return this.valueChanged.emit(this.placeholder); //reset
     } else {
       this.valueChanged.emit(body);
     }

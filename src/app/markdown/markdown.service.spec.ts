@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { MDService } from './md.service';
+import { MDService } from './markdown.service';
 
 describe('MDService', () => {
   let service: MDService;
