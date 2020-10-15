@@ -1,6 +1,10 @@
 {
   "name": "@lwrly/mark",
-  "version": "1.0.6",
+  "version": "1.0.7",
+  "description": "Server app that uses the @octo-org/octo-app package",
+  //"main": "index.js",
+  "author": "Let'sWorkRemote.ly!",
+  "license": "MIT",
   "repository": {
     "url": "https://github.com/lwrly/mark"
   },
